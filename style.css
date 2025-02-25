@@ -1,0 +1,349 @@
+/* Il mio carattere */
+@import url(bariol-font.css);
+
+
+/* Aspetto generale della pagina, Ho copiato la combinazione di colori da hackthebox. */
+
+:root {
+    --bianco: #eceff4;
+    --biancotr: #eceff480;
+    --grigio: #a4b1cd;
+    --grigiotr: #a4b1cd80;
+    --blu: #141d2b;
+    --blutr: #141d2b80;
+    --azzurro: #1a2332;
+	--archlinux: #06ffef;
+    --azzurrotr: #1a233280;
+    --bluscuro: #111927;
+    --bluscurotr: #11192780;
+    --highlight: #212a39;
+    --highlighttr: #212a3980;
+    --verde: #9fef00;
+    --verdetr: #9fef0080;
+    --normale: bariolregular, Arial, Helvetica, sans-serif;
+    --leggero: bariollight, Arial, Helvetica, sans-serif;
+    --grassetto: bariolbold, Arial, Helvetica, sans-serif;
+    --corsivo: bariolitalic, Arial, Helvetica, sans-serif;
+    --titelschatten: 0px 1px 0px #609100, 0px 2px 0px #609100, 0px 3px 0px #609100, 0px 4px 0px #609100, 0px 5px 4px #000000;
+    
+}
+
+body {
+    background-color: var(--blu);
+    color: var(--bianco);
+    font-family: var(--normale), Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 1px #000000;
+    margin-top: -15px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    overflow: hidden;
+}
+/* separatore nei preferiti */ 
+hr {
+    max-width: 95%;
+    border-top: 1px dotted var(--verde);
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    box-shadow: var(--boxschatten);
+}
+
+::selection {
+    color: var(--bluscuro);
+    background-color: var(--azzurro);
+    text-shadow: none;
+}
+
+a {
+    color: var(--grigio);
+    text-decoration-line: none;
+    display: block;
+}
+
+/* Selezione dei preferiti*/
+a:hover {
+    color: var(--bianco);
+    font-family: var(--grassetto), Arial, Helvetica, sans-serif;
+    text-decoration-line: underline;
+    text-decoration-color: var(--archlinux);  
+    text-decoration-style: solid;
+    animation: fade 0.8s;
+}
+
+/* Stili di carattere */
+b, strong {
+    font-family: var(--grassetto);
+}
+
+i, em {
+    font-family: var(--corsivo);
+}
+
+p.titel {
+    font-size: 22px;
+    font-family: var(--grassetto);
+    display: inline-block;
+    vertical-align: middle;
+} 
+
+p.dreideh {
+    color: var(--azzurro);
+    font-family: var(--grassetto);
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    text-shadow: var(--titelschatten);
+}
+
+p.kursiv {
+    color: var(--lila);
+    font-style: italic;
+    font-weight: bold;
+    display: inline;
+    text-shadow: var(--textschatten);
+}
+
+p.fett {
+    font-family: var(--handschrift);
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: inline;
+}
+
+p.unterstrichen {
+    text-decoration: underline var(--verde);
+    display: inline;
+}
+
+
+/* Stili specifici del contenitore */
+div.site {
+    display: flex;
+    justify-content: center;
+}
+
+div.content {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+div.bookmarks {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    position: fixed;
+    width: 800px;
+    min-width: 310px;
+}
+
+div.bookmark {
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    padding: 5px;
+    background: var(--azzurrotr);
+    backdrop-filter: blur(5px);
+    width: 192px;
+    border: 1px solid var(--bluscuro);
+    border-radius: 7px;
+    box-shadow: 1px 1px 5px 0px #0000005b;
+    vertical-align: top;
+    text-align: center;
+    animation: onload 1.0s;
+}
+
+div.bookmark:hover {
+    border: 1px solid var(--highlight);
+}
+
+div.bookmark:first-child {
+    margin-left: -15px;
+}
+
+div.bookmark:last-child {
+    margin-right: -20px;
+}
+
+div.header {
+    background-color: var(--bluscurotr);
+    color: var(--bianco);
+    margin-top: -5px;
+    margin-bottom: -5px;
+    margin-left: -5px;
+    margin-right: -5px;
+    border: none;
+    border-radius: 7px 7px 0px 0px;
+    font-family: var(--corsivo);
+    text-align: center;
+    cursor: default;
+    padding-bottom: 5px;
+}
+
+div.titel {
+    transform: rotate(-5deg);
+    float:right;
+    margin-top: -10px;
+    padding-top: 10px;
+    padding-left: 5px;
+    text-align: center;
+}
+
+div.tags {
+    margin-top: 10px;
+    margin-bottom: -10px;
+    text-align: center;
+}
+
+div.links {
+    text-align: center;
+    word-spacing: 8px;
+}
+
+
+/*Ricerca*/
+div.suchbox {
+    background: var(--azzurrotr);
+    backdrop-filter: blur(5px);
+    margin-top: -110px;
+    margin-bottom: 0px;
+    margin-right: -2px;
+    margin-left: -15px;
+    width: 802px;
+    min-width: 310px;
+    border: 1px solid var(--bluscuro);
+    border-radius: 7px;
+    box-shadow: 1px 1px 5px 0px #0000005b;
+    padding: 15px;
+    padding-right: 13px;
+    animation: onload 0.3s;
+}
+
+div.suchbox:hover {
+    border: 1px solid var(--highlight);
+}
+
+form#suchform {
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+input.suche {
+    background: var(--hellblautr);
+    backdrop-filter: blur(5px);
+    color: var(--archlinux);
+    font-size: 20px;
+    display: block;
+    border-top: none;
+    border-bottom: 1px solid var(--bluscuro);
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    outline: 0;
+    box-shadow: none;
+    width: 97%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+}
+
+input.suche:hover, input.suche:active, input.suche:focus {
+    border-top: none;
+    border-bottom: 1px solid var(--archlinux);
+    border-left: none;
+    border-right: none;
+}
+
+input::placeholder {
+    color: var(--grigio);
+    font-family: var(--corsivo), Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-shadow: 1px 1px 1px #000000;
+}
+
+/* Mobile */
+@media all and (max-width: 810px) {
+    body {
+        background-image: url('../background.png');
+        background-repeat: repeat;
+        overflow: scroll;
+        line-height: 30px;
+    }
+
+    canvas { 
+        opacity: 0;
+        visibility: hidden;
+        width: 1px;
+        height: 1px;
+    }
+
+    div.side {
+        display: block;
+    }
+    
+    div.bookmarks {
+        margin-top: 5px;
+        margin-left: -10px;
+        width: 95%;
+        position: relative;
+        padding-top: 50px;
+    }
+
+    div.bookmark {
+        display: block;
+        margin-bottom: 15px;
+        width: 100%;
+        font-size: 28px;
+    }
+
+    div.bookmark:first-child {
+        margin-left: 0px;
+    }
+
+    div.bookmark:last-child {
+        margin-right: 0px;
+    }
+
+    div.suchbox {
+        margin-top: 0px;
+        padding: 5px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 9999;
+    }
+
+    input.suche {
+        font-size: 30px;
+    }
+
+    input::placeholder {
+        font-size: 14px;
+    }
+}
+
+
+/* Animazione */
+@keyframes onload {
+    0% { transform: scale(0.1); opacity: 0; filter: blur(10px); }
+    50% { transform: scale(1.1); opacity: 0.5; filter: blur(5px); }
+    100% { transform: scale(1); opacity: 1; filter: blur(0px); }
+}
+
+@keyframes fade {
+    0% { color: var(--grigio); }
+    100% { color: var(--bianco); }
+}
