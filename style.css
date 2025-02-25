@@ -21,10 +21,6 @@
     --verde: #9fef00;
     --verdetr: #9fef0080;
     --font-family: "Barlow Semi Condensed", serif;
-    --normale: bariolregular, Arial, Helvetica, sans-serif;
-    --leggero: bariollight, Arial, Helvetica, sans-serif;
-    --grassetto: bariolbold, Arial, Helvetica, sans-serif;
-    --corsivo: bariolitalic, Arial, Helvetica, sans-serif;
     --titelschatten: 0px 1px 0px #609100, 0px 2px 0px #609100, 0px 3px 0px #609100, 0px 4px 0px #609100, 0px 5px 4px #000000;
     
 }
@@ -187,6 +183,7 @@ div.header {
     border: none;
     border-radius: 7px 7px 0px 0px;
     font-family: var(--font-family);
+    font-style: italic;
     text-align: center;
     cursor: default;
     padding-bottom: 5px;
