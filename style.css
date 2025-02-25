@@ -12,7 +12,7 @@
     --blu: #141d2b;
     --blutr: #141d2b80;
     --azzurro: #1a2332;
-	--archlinux: #06ffef;
+    --archlinux: #06ffef;
     --azzurrotr: #1a233280;
     --bluscuro: #111927;
     --bluscurotr: #11192780;
@@ -20,6 +20,7 @@
     --highlighttr: #212a3980;
     --verde: #9fef00;
     --verdetr: #9fef0080;
+    --font-family: "Barlow Semi Condensed", serif;
     --normale: bariolregular, Arial, Helvetica, sans-serif;
     --leggero: bariollight, Arial, Helvetica, sans-serif;
     --grassetto: bariolbold, Arial, Helvetica, sans-serif;
@@ -31,7 +32,7 @@
 body {
     background-color: var(--blu);
     color: var(--bianco);
-    font-family: var(--normale), Arial, Helvetica, sans-serif;
+    font-family: var(--font-family), Arial, Helvetica, sans-serif;
     font-size: 18px;
     letter-spacing: 1px;
     text-shadow: 1px 1px 1px #000000;
@@ -70,7 +71,7 @@ a {
 /* Selezione dei preferiti*/
 a:hover {
     color: var(--bianco);
-    font-family: var(--grassetto), Arial, Helvetica, sans-serif;
+    font-family: var(--font-family), Arial, Helvetica, sans-serif;
     text-decoration-line: underline;
     text-decoration-color: var(--archlinux);  
     text-decoration-style: solid;
@@ -79,23 +80,23 @@ a:hover {
 
 /* Stili di carattere */
 b, strong {
-    font-family: var(--grassetto);
+    font-family: var(--font-family);
 }
 
 i, em {
-    font-family: var(--corsivo);
+    font-family: var(--font-family);
 }
 
 p.titel {
     font-size: 22px;
-    font-family: var(--grassetto);
+    font-family: var(--font-family);
     display: inline-block;
     vertical-align: middle;
 } 
 
 p.dreideh {
     color: var(--azzurro);
-    font-family: var(--grassetto);
+    font-family: var(--font-family);
     font-size: 32px;
     font-weight: bold;
     margin-top: 5px;
@@ -185,7 +186,7 @@ div.header {
     margin-right: -5px;
     border: none;
     border-radius: 7px 7px 0px 0px;
-    font-family: var(--corsivo);
+    font-family: var(--font-family);
     text-align: center;
     cursor: default;
     padding-bottom: 5px;
@@ -267,7 +268,7 @@ input.suche:hover, input.suche:active, input.suche:focus {
 
 input::placeholder {
     color: var(--grigio);
-    font-family: var(--corsivo), Arial, Helvetica, sans-serif;
+    font-family: var(--font-family), Arial, Helvetica, sans-serif;
     text-align: center;
     font-size: 12px;
     letter-spacing: 3px;
@@ -277,7 +278,7 @@ input::placeholder {
 /* Mobile */
 @media all and (max-width: 810px) {
     body {
-        background-image: url('../background.png');
+        background-image: url('background.png');
         background-repeat: repeat;
         overflow: scroll;
         line-height: 30px;
