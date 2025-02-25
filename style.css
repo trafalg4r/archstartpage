@@ -183,7 +183,7 @@ div.header {
     border: none;
     border-radius: 7px 7px 0px 0px;
     font-family: var(--font-family);
-    font-style: italic;
+    font-style: bold, italic;
     text-align: center;
     cursor: default;
     padding-bottom: 5px;
